@@ -1,0 +1,177 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffa500;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FFA500;
+    transition: width 0.3s;
+}
+nav ul li a:hover::after {
+    width: 100%;
+} 
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h1,
+h2 {
+    color: #333;
+    font-family: 'Unlock', sans-serif;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 2rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 1rem;
+}
+
+input,
+textarea,
+button {
+    margin-top: 0.5rem;
+}
+
+.button {
+    position: relative;
+    padding: 10px 20px;
+    background-color: #FF8C00; /* Naranja */
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+    transform: translateY(4px); /* Simula profundidad al presionar */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #FF8C00;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.button:hover:before {
+    opacity: 1;
+}
+
+.button:active {
+    transform: scale(0.95); /*Efecto rebote*/
+}
+
+  
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+table,
+th,
+td {
+    border: 1px solid #333
+}
+
+th,
+td {
+    padding: 0.5rem;
+    text-align: left;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: left; /* Centra la galería horizontalmente */
+    gap: 20px; /* Espacio entre las imágenes */
+    margin-top: 20px;
+}
+
+.image-gallery img {
+    width: 450px; /* Ajusta el tamaño de las imágenes */
+    height: auto;
+    border: 5px solid transparent;
+    background-image: linear-gradient(to right, orange 50%, yellow 50%);
+    background-clip: padding-box;
+    transition: box-shadow 0.3s ease;
+}
+
+.image-gallery img:hover {
+    box-shadow: 0 0 10px 5px orange;
+}
+
